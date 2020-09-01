@@ -28,7 +28,7 @@ export default class CreateExercise extends Component {
 
 
   componentDidMount() {
-    axios.get(BACKEND_URL+'users/')
+    axios.get(BACKEND_URL +'users/')
     .then(response => {
       if (response.data.length > 0) {
         this.setState({ 
@@ -82,7 +82,7 @@ export default class CreateExercise extends Component {
     };
   
     console.log(exercise);
-    axios.post(BACKEND_URL = 'exercises/add', exercise)  
+    axios.post(BACKEND_URL + 'exercises/add', exercise)  
     .then(res => console.log(res.data));
     
     window.location = '/';
